@@ -17,6 +17,7 @@ makeCacheMatrix <- function(x = matrix()) {
                 x <<- y
                 inverse <<- NULL
         }
+        
         get <- function() x
         
         # setsolve sets the inverse of the original matrix and store it
@@ -41,6 +42,7 @@ cachesolve <- function(x, ...) {
                 message("getting cached data")
                 return(inverse)        
         }
+        
         data <- x$get()
         inverse <- solve(data, ...)      # the inverse matrix is calculated
         x$setsolve(inverse)              # caches the calculated inverse matrix
