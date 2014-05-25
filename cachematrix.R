@@ -10,7 +10,7 @@
 makeCacheMatrix <- function(x = matrix()) {
         
         #if the matrix is not square the function is terminated
-        if (nrow(x)!=ncol(x)) stop("The matrix is not square and it is not invertible")
+        if (nrow(x)!=ncol(x)) stop("The matrix is not invertible because it is a non-square matrix")
         
         inverse <- NULL
         set <- function(y){
